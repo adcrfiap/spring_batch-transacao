@@ -9,7 +9,7 @@
 
 spring.data.mongodb:
 * uri -> uri de conexão do mongoDB (default mongodb://localhost:27017)
-* databse -> base de dados (default alunos)
+* databse -> base de dados (default transacao)
 
 ## Arquivo de entrada
 
@@ -17,7 +17,7 @@ Permancer com o arquivo `./src/main/resources/lista-transacao.txt` que contem os
 
 ## Clonar o projeto
 
-    git clone https://github.com/adcrfiap/spring_batch-aluno.git
+    git clone https://github.com/adcrfiap/spring_batch-transacao.git
     
 ## Executar a classe
 **BatchTransacaoApplication**
