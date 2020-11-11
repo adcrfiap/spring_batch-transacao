@@ -1,0 +1,8 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017
+      database: batchtrasaction
+      auto-index-creation: true
+input:
+  file: lista-transacao.txt
