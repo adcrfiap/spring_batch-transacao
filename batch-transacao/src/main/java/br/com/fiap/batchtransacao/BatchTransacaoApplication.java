@@ -32,7 +32,7 @@ public class BatchTransacaoApplication {
 	public FixedLengthTokenizer fixedLengthTokenizer() {
 		FixedLengthTokenizer tokenizer = new FixedLengthTokenizer();
 
-		tokenizer.setNames("numeroCartao", "valor", "local", "data");
+		tokenizer.setNames("cardNumber", "value", "locale", "Date");
 		tokenizer.setColumns(
 				new Range(1, 13),
 				new Range(14, 28),

@@ -2,21 +2,28 @@ package br.com.fiap.batchtransacao.model;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import javax.persistence.Id;
 import java.math.BigDecimal;
+import java.util.Date;
 
 @Data
 @NoArgsConstructor
-@Document(collection = "transacao")
+@Document(collection = "transactions")
 public class Transactions {
 
     @Id
     private String id;
-    private String numeroCartao;
-    private String data;
-    private String local;
-    private BigDecimal valor;
+
+    private String cardNumber;
+
+    private String date;
+
+    private String locale;
+
+    private String value;
+
 }
 
