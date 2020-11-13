@@ -18,6 +18,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.context.annotation.Bean;
 
+import java.math.BigDecimal;
+
 @SpringBootApplication(exclude = {DataSourceAutoConfiguration.class })
 @EnableBatchProcessing
 public class BatchTransacaoApplication {
@@ -32,12 +34,11 @@ public class BatchTransacaoApplication {
 	public FixedLengthTokenizer fixedLengthTokenizer() {
 		FixedLengthTokenizer tokenizer = new FixedLengthTokenizer();
 
-		tokenizer.setNames("cardNumber", "value", "locale", "Date");
+		tokenizer.setNames("cardNumber", "value", "locale");
 		tokenizer.setColumns(
 				new Range(1, 13),
 				new Range(14, 28),
-				new Range(29, 44),
-				new Range(45, 54)
+				new Range(29, 38)
 		);
 
 		return tokenizer;

@@ -19,11 +19,12 @@ public class Transactions {
 
     private String cardNumber;
 
-    private String date;
+    @CreatedDate
+    private Date date;
 
     private String locale;
 
-    private String value;
+    private BigDecimal value;
 
 }
 
